@@ -1,0 +1,13 @@
+server:
+  port:
+
+spring:
+  application:
+    name:
+
+eureka:
+  client:
+    register-with-eureka:
+    fetch-registry:
+    service-url:
+      defaultUrl:

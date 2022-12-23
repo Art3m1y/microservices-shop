@@ -1,0 +1,21 @@
+eureka:
+    client:
+        service-url:
+            defaultZone:
+
+server:
+    port:
+
+spring:
+    application:
+        name:
+    datasource:
+        driver-class-name:
+        password:
+        url:
+        username:
+    jpa:
+        properties:
+            hibernate:
+                dialect:
+                show_sql:

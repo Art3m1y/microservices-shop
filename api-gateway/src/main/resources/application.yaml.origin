@@ -1,0 +1,19 @@
+server:
+  port:
+
+spring:
+  application:
+    name:
+
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled:
+          lower-case-service-id:
+
+eureka:
+  client:
+    service-url:
+      defaultUrl:

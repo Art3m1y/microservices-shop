@@ -1,0 +1,37 @@
+server:
+  port: 8765
+
+spring:
+  application:
+    name: apigateway
+
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: service-product
+          uri: lb://product-module
+          predicates:
+            Path=/product/**
+          filters:
+            - LoginFilter
+        - id: service-admin
+          uri: lb://admin-module
+          predicates:
+            Path=/admin/**
+          filters:
+            - LoginFilter
+        - id: service-login
+          uri: lb://login
+          predicates:
+            Path=/auth/**
+
+
+eureka:
+  client:
+    service-url:
+      defaultUrl: http://localhost:8761/eureka
